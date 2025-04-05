@@ -25,3 +25,14 @@ def home(request):
     return render(request, "home.html", context)
 
 # The HTML template has been moved to a separate file named "home.html".
+
+# Ignore database files
+db.sqlite3
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore static files collected for deployment
+/staticfiles/
