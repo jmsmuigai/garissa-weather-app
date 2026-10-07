@@ -1,8 +1,9 @@
+import os
 import requests
 from django.shortcuts import render
 
 def home(request):
-    api_key = "272673e2a3ef998211ae5c4c86845e3f"  # Your API key
+    api_key = os.environ.get('OPENWEATHER_API_KEY', '')  # set in your environment, never in code
     city = "Garissa"  # Default city
     url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric"
 
